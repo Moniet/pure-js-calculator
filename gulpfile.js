@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
-const cleanCSS = requrie('clean-css');
+const cleanCSS = require('clean-css');
 const pump = require('pump');
 const rename = require('gulp-rename');
 
@@ -35,7 +35,9 @@ gulp.task('css-min', function() {
       path.basename += 'min';
       path.extname += '.css';
     }))
-   .pipe(gulp.dest(lokesh.css));
+   .pipe(gulp.dest(lokesh.css)).on('error', function(err) {
+     console.error('error in css min task', err.toString())
+   });
 
 });
 
