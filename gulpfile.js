@@ -15,28 +15,29 @@ var lokesh = {
 gulp.task('js-min', function (cb) {
 
    return gulp.src(lokesh.scripts.toString())
-      .pipe(minify())
+      .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(rename(function (path) {
         path.basename += 'min';
         path.extname += '.js';
       }))
       .pipe(gulp.dest('scripts'))
       .on('error', function(err) {
-      console.error('Error in script task', err.toString());
-   });
+        console.error('Error in script task', err.toString());
+      });
 
 });
 
 gulp.task('css-min', function() {
 
   return gulp.src(lokesh.css.toString())
-    .path(minify())
+    .path(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename(function (path) {
       path.basename += 'min';
       path.extname += '.css';
     }))
-   .pipe(gulp.dest(lokesh.css)).on('error', function(err) {
-     console.error('error in css min task', err.toString())
+   .pipe(gulp.dest(lokesh.css))
+   .on('error', function(err) {
+     console.error('error in css min task', err.toString());
    });
 
 });
@@ -48,4 +49,4 @@ gulp.task('lookout', function() {
 
 });
 
-gulp.task('comp', ['js-min', 'css-min']);
+gulp.task('comp', ['js-min', 'css-min', 'lookout']);
