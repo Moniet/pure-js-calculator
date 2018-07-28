@@ -117,9 +117,8 @@ result.addEventListener('click', function() {
 
   if (eval(screen) === 0 && operation === 4) {
 
-    var funArr = ["you're a dumass bro!", "undefined", "abbay haule!", "dimaag kharab hoogaya kya!"];
-    var fun = Math.floor(Math.random() * Math.floor(4));
-
+    var funArr = ["sneaky, divide by zero!!!", "undefined"];
+    var fun = Math.floor(Math.random() * Math.floor(2));
     header.innerHTML = funArr[fun];
 
   }

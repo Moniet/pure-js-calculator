@@ -73,6 +73,8 @@ body {
 
 #len_error {
   font-weight: bold;
+  text-align: center;
+  background: hotpink;
   padding: 0px;
   margin: 0px;
   opacity: 0;

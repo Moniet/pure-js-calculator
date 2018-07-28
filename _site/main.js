@@ -16,7 +16,11 @@ function printNum(dig) {
 
     lenErr.style.opacity = '1';
 
-    setTimeout(() => { lenErr.style.opacity = '0'; }, 2000);
+    setTimeout(() => {
+
+        lenErr.style =  0;
+
+    }, 5000);
 
   }
 
@@ -66,7 +70,15 @@ decimal.addEventListener('click', () => {
 
 var clr = document.getElementById('clear');
 
-clr.addEventListener('click', () => { screen = "0"; header.innerHTML = "0"; });
+function allClear() {
+
+  screen = "0";
+  store = 0;
+  header.innerHTML = "0";
+
+}
+
+clr.addEventListener('click', allClear);
 
 
 // calculate the result
@@ -96,15 +108,38 @@ function calculate() {
 
   }
 
-  errPrevent = 0;
+  store = screen;
   header.innerHTML = screen;
 
 }
 
-result.addEventListener('click', calculate);
+result.addEventListener('click', function() {
+
+  if (eval(screen) === 0 && operation === 4) {
+
+    var funArr = ["you're a dumass bro!", "undefined", "abbay haule!", "dimaag kharab hoogaya kya!"];
+    var fun = Math.floor(Math.random() * Math.floor(4));
+
+    header.innerHTML = funArr[fun];
+
+  }
+
+  else if (isNaN(eval(screen))) {
+
+    allClear(); 
+
+  }
+
+  else if (operation === 1 || operation === 2 || operation === 3 || operation === 4) {
+
+    calculate();
+
+  }
+
+});
 
 
-// operators
+// operators operating function to operate on the digits, no it's not a smart medical pun, but it can be.
 
 var operators = document.getElementsByClassName('printcheck');
 
@@ -112,38 +147,44 @@ function printOps(op) {
 
   var opVal = op.target.value.toString();
 
-  if (opVal === '+' && errPrevent === 0) {
+  if (opVal === '+') {
 
     operation = 1;
 
   }
-  else if (opVal === '-' && errPrevent === 0) {
+  else if (opVal === '-') {
 
     operation = 2;
 
   }
-  else if (opVal === '*' && errPrevent === 0) {
+  else if (opVal === '*') {
 
     operation = 3;
 
   }
-  else if (opVal === '/' && errPrevent === 0) {
+  else if (opVal === '/') {
 
     operation = 4;
 
   }
 
-  errPrevent = 1;
   store = screen;
   screen = "";
   header.innerHTML = screen;
 
 }
 
-for (var n = 0; n < operators.length; n++ ) {
+for (var n = 0; n < operators.length; n++) {
 
   operators[n].addEventListener('click', printOps);
 
 }
 
-// disp op value
+
+// op error prevention
+
+// divide by zero error
+
+// NaN error
+
+//
