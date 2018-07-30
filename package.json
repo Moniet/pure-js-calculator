@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1"

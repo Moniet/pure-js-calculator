@@ -89,22 +89,22 @@ function calculate() {
 
   if (operation === 1) {
 
-    screen = eval(store) + eval(screen);
+    screen = Number(store) + Number(screen);
 
   }
   else if (operation === 2) {
 
-    screen = eval(store) - eval(screen);
+    screen = Number(store) - Number(screen);
 
   }
   else if (operation === 3) {
 
-    screen = eval(store) * eval(screen);
+    screen = Number(store) * Number(screen);
 
   }
   else if (operation === 4) {
 
-    screen = eval(store) / eval(screen);
+    screen = Number(store) / Number(screen);
 
   }
 
@@ -115,17 +115,17 @@ function calculate() {
 
 result.addEventListener('click', function() {
 
-  if (eval(screen) === 0 && operation === 4) {
+  if (Number(screen) === 0 && operation === 4) {
 
-    var funArr = ["sneaky, divide by zero!!!", "undefined"];
+    var funArr = ["sneaky divide by zero!!!", "undefined"];
     var fun = Math.floor(Math.random() * Math.floor(2));
     header.innerHTML = funArr[fun];
 
   }
 
-  else if (isNaN(eval(screen))) {
+  else if (isNaN(Number(screen))) {
 
-    allClear(); 
+    allClear();
 
   }
 
@@ -178,12 +178,3 @@ for (var n = 0; n < operators.length; n++) {
   operators[n].addEventListener('click', printOps);
 
 }
-
-
-// op error prevention
-
-// divide by zero error
-
-// NaN error
-
-//
