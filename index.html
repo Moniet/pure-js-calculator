@@ -9,81 +9,87 @@
     <link rel="stylesheet" href="assets/css/min-css/style.min.css">
   </head>
   <body>
-  <div class="wrapper bg-green">
-    <div class="container">
-      <div class="row bg">
-        <div class="col-md-12 header">
-     	    <h2 id="displayscreen"></h2>
-        </div>
-          <div class="col-md-8 bd-right">
-            <div class="row">
-          	<div class="col-md-4">
-          	  <button type="button" class="add_arr btn btn-default round_btn" value="1">1</button>
-          	</div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="2">2</button>
+  <div class="wrapper">
+    <div class="bg-green">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 header">
+       	    <h2 id="displayscreen"></h2>
+          </div>
+            <div class="col-xs-8 col-md-8 bd-right">
+            <div class="container">
+             <div class="row">
+            	<div class="col-xs-4 col-md-4">
+            	  <button type="button" class="add_arr btn btn-default round_btn" value="1">1</button>
+            	</div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="2">2</button>
+                </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="3">3</button>
               </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="3">3</button>
-            </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="4">4</button>
-            </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="5">5</button>
-            </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="6">6</button>
-            </div>
-          	 <div class="col-md-4">
-                <button type="button" class="add_arr btn btn-default round_btn" value="7">7</button>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="4">4</button>
+              </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="5">5</button>
+              </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="6">6</button>
+              </div>
+            	 <div class="col-xs-4 col-md-4">
+                  <button type="button" class="add_arr btn btn-default round_btn" value="7">7</button>
+               </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="8">8</button>
+              </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="add_arr btn btn-default round_btn" value="9">9</button>
+              </div>
+              <div class="col-xs-4 col-md-4">
+                <button class="btn btn-default round_btn" id="clear">C</button>
+              </div>
+            	<div class="col-xs-4 col-md-4">
+                <button type="button" class="btn btn-default add_arr round_btn" value="0">0</button>
+              </div>
+              <div class="col-xs-4 col-md-4">
+                <button type="button" id="decimal" value="." class="btn btn-default round_btn">.</button>
              </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="8">8</button>
-            </div>
-          	<div class="col-md-4">
-              <button type="button" class="add_arr btn btn-default round_btn" value="9">9</button>
-            </div>
-            <div class="col-md-4">
-              <button class="btn btn-default round_btn" id="clear">C</button>
-            </div>
-          	<div class="col-md-4">
-              <button type="button" class="btn btn-default add_arr round_btn" value="0">0</button>
-            </div>
-            <div class="col-md-4">
-              <button type="button" id="decimal" value="." class="btn btn-default round_btn">.</button>
-           </div>
-            </div>
-        </div>
-        <div class="col-md-4"> <!-- the operators: minus, multiplication etc.-->
-          <div class="row">
-            <div class="col-md-6 operators">
-              <button type="button" class="btn printcheck" id="plus" value="+"> &#43; </button>
-            </div>
-            <div class="col-md-6 operators">
-              <button type="button" class="btn printcheck" id="minus" value="-"> &#45; </button>
-            </div>
-            <div class="col-md-6 operators">
-              <button type="button" class="btn printcheck" id="divide" value="/"> &#247; </button>
-            </div>
-            <div class="col-md-6 operators">
-              <button type="button" class="btn printcheck"  id="multiply" value="*"> x </button>
-            </div>
-            <div class="col-md-12 mb-0 operators">
-              <button type="button" id="result" class="btn mb-0" value="="> &#61; </button>
-            </div>
-            <div class="col-md-12">
-              <hr class="greenline">
-            </div>
-            <div class="col-md-6 operators">
-              <button type="button" id="percent" class="btn" value="%"> &#37;</button>
+              </div>
             </div>
           </div>
+          <div class="col-xs-4 col-md-4"> <!-- the operators: minus, multiplication etc.-->
+            <div class="container">
+             <div class="row">
+              <div class="col-xs-6 col-md-6 operators">
+                <button type="button" class="btn printcheck" id="plus" value="+"> &#43; </button>
+              </div>
+              <div class="col-xs-6 col-md-6 operators">
+                <button type="button" class="btn printcheck" id="minus" value="-"> &#45; </button>
+              </div>
+              <div class="col-xs-6 col-md-6 operators">
+                <button type="button" class="btn printcheck" id="divide" value="/"> &#247; </button>
+              </div>
+              <div class="col-xs-6 col-md-6 operators">
+                <button type="button" class="btn printcheck"  id="multiply" value="*"> x </button>
+              </div>
+              <div class="col-xs-12 col-md-12 mb-0 operators">
+                <button type="button" id="result" class="btn mb-0" value="="> &#61; </button>
+              </div>
+              <div class="col-xs-12 col-md-12">
+                <hr class="greenline">
+              </div>
+              <div class="col-xs-6 col-md-6 operators">
+                <button type="button" id="percent" class="btn" value="%"> &#37;</button>
+              </div>
+            </div>
+           </div>
+           </div>
+          <div class="col-xs-12 col-md-12 bd-bottom mt-0">
+             <p id="len_error">Too Many Numbers Ya Nerd!</p>
+          </div>
          </div>
-        <div class="col-md-12 bd-bottom mt-0">
-           <p id="len_error">Too Many Numbers Ya Nerd!</p>
         </div>
-       </div>
       </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -30,11 +30,11 @@ function printNum(dig) {
 
   if (screen.length > 30) {
 
-    lenErr.style.opacity = '1';
+    header.innerHTML = "Oh snap!";
 
     setTimeout(function() {
 
-        lenErr.style =  0;
+        allClear();
 
     }, 3000);
 
@@ -176,30 +176,33 @@ function printOps(op) {
 
   var opVal = op.target.value.toString();
 
-  if (opVal === '+') {
-
-    operation = 1;
-
-  }
-  else if (opVal === '-') {
-
-    operation = 2;
-
-  }
-  else if (opVal === '*') {
-
-    operation = 3;
-
-  }
-  else if (opVal === '/') {
-
-    operation = 4;
-
+  switch(opVal) {
+    case '+':
+      operation = 1;
+      break;
+    case '-':
+      operation = 2;
+      break;
+    case '*':
+      operation = 3;
+      break;
+    case '/':
+      operation = 4;
+      break;
+    default:
+      return;
   }
 
   store = screen;
-  screen = "";
-  header.innerHTML = screen;
+  screen = "0";
+  header.innerHTML = "";
+
+
+  setTimeout(function() {
+
+    header.innerHTML = store;
+
+  },60);
 
 }
 
