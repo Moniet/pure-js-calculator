@@ -7,6 +7,22 @@ var header = document.getElementById('displayscreen');
 var lenErr = document.getElementById('len_error');
 var errPrevent = 0;
 
+// clear all
+
+var clr = document.getElementById('clear');
+
+function allClear() {
+
+  screen = "0";
+  store = 0;
+  header.innerHTML = "0";
+
+}
+
+clr.addEventListener('click', allClear);
+
+// print le digits
+
 function printNum(dig) {
 
   var digVal = dig.target.value;
@@ -20,13 +36,21 @@ function printNum(dig) {
 
         lenErr.style =  0;
 
-    }, 5000);
+    }, 3000);
 
   }
 
-  else if (Number(screen) === 0 && isDecimal === -1) { screen = digVal; }
+  else if (Number(screen) == 0 && isDecimal == -1) {
 
-  else { screen = screen + digVal; }
+    screen = digVal;
+
+  }
+
+  else {
+
+    screen = screen + digVal;
+
+  }
 
   header.innerHTML = screen;
 
@@ -48,13 +72,13 @@ decimal.addEventListener('click', function()  {
 
   var decimalInd = screen.indexOf('.');
 
-  if (screen.length === 0) {
+  if (screen.length == 0) {
 
     screen = "0.";
 
   }
 
-  else if (decimalInd === -1) {
+  else if (decimalInd == -1) {
 
     screen = screen + ".";
 
@@ -62,24 +86,30 @@ decimal.addEventListener('click', function()  {
 
   header.innerHTML = screen;
 
-
 });
 
+//print percent
 
-// clear all
+var perc = document.getElementById('percent');
 
-var clr = document.getElementById('clear');
+perc.addEventListener('click', getPercent);
 
-function allClear() {
+function getPercent() {
 
-  screen = "0";
-  store = 0;
-  header.innerHTML = "0";
+  if (Number(screen) != 0) {
+
+    screen = Number(screen) / 100;
+
+    header.innerHTML = screen;
+  } else {
+
+    var mesgArr = ['woops!', 'forgot how to math?', 'cannot compute'];
+    var myNum = Math.floor(Math.random() * Math.floor(3));
+    header.innerHTML = mesgArr[myNum];
+
+  }
 
 }
-
-clr.addEventListener('click', allClear);
-
 
 // calculate the result
 
@@ -115,7 +145,7 @@ function calculate() {
 
 result.addEventListener('click', function() {
 
-  if (Number(screen) === 0 && operation === 4) {
+  if (Number(screen) == 0 && operation == 4) {
 
     var funArr = ["sneaky divide by zero!!!", "undefined"];
     var fun = Math.floor(Math.random() * Math.floor(2));
@@ -129,7 +159,7 @@ result.addEventListener('click', function() {
 
   }
 
-  else if (operation === 1 || operation === 2 || operation === 3 || operation === 4) {
+  else if (operation == 1 || operation == 2 || operation == 3 || operation == 4) {
 
     calculate();
 
@@ -178,3 +208,5 @@ for (var n = 0; n < operators.length; n++) {
   operators[n].addEventListener('click', printOps);
 
 }
+
+// checkfor e

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/min-css/style.min.css">
   </head>
   <body>
   <div class="wrapper bg-green">
@@ -53,14 +53,9 @@
             <div class="col-md-4">
               <button type="button" id="decimal" value="." class="btn btn-default round_btn">.</button>
            </div>
-           <!--	// Percent Button//
-           <div class="col-md-4">
-              <button class="btn btn-default round_btn" id="percent">%</button>
-           </div>
-          -->
             </div>
         </div>
-        <div class="col-md-4"> <!-- the operators, no! not the medical kind, the coding kind you know ? plus, minus, multiplication etc. That kind of thing ? -->
+        <div class="col-md-4"> <!-- the operators: minus, multiplication etc.-->
           <div class="row">
             <div class="col-md-6 operators">
               <button type="button" class="btn printcheck" id="plus" value="+"> &#43; </button>
@@ -74,11 +69,14 @@
             <div class="col-md-6 operators">
               <button type="button" class="btn printcheck"  id="multiply" value="*"> x </button>
             </div>
-            <div class="col-md-12 operators">
-              <button type="button" id="result" class="btn" value="="> &#61; </button>
+            <div class="col-md-12 mb-0 operators">
+              <button type="button" id="result" class="btn mb-0" value="="> &#61; </button>
             </div>
             <div class="col-md-12">
               <hr class="greenline">
+            </div>
+            <div class="col-md-6 operators">
+              <button type="button" id="percent" class="btn" value="%"> &#37;</button>
             </div>
           </div>
          </div>
@@ -91,6 +89,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="assets/scripts/main.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/min-js/main.min.js" type="text/javascript"></script>
   </body>
 </html>
