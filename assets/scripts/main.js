@@ -1,10 +1,11 @@
 // print numbers
+'use strict';
 
 var screen = "0";
 var store = 0;
 var operation = 0;
-var header = document.getElementById('displayscreen');
-var lenErr = document.getElementById('len_error');
+var header = document.querySelector('#displayscreen');
+var lenErr = document.querySelector('#len_error');
 var errPrevent = 0;
 
 // clear all
@@ -40,7 +41,7 @@ function printNum(dig) {
 
   }
 
-  else if (Number(screen) == 0 && isDecimal == -1) {
+  else if (Number(screen) == 0 && isDecimal == -1) { // Number to avoid type coersion complications
 
     screen = digVal;
 
@@ -168,7 +169,8 @@ result.addEventListener('click', function() {
 });
 
 
-// operators operating function to operate on the digits, no it's not a smart medical pun, but it can be.
+// operators' operating function to operate on the digits.
+// No, it's not a medical pun, but it can be.
 
 var operators = document.getElementsByClassName('printcheck');
 

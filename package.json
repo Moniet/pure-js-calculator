@@ -1,26 +1,25 @@
 {
-  "name": "calculator",
+  "name": "pure-js-calculator",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "a simple responsive calculator",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.24.6",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "npm": "^6.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moniet/pure-js-calculator.git"
   },
+  "author": "Moniet Sawhney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moniet/pure-js-calculator/issues"
+  },
+  "homepage": "https://github.com/Moniet/pure-js-calculator#readme",
   "dependencies": {
-    "clean-css": "^4.2.0",
-    "gulp-clean-css": "^3.9.4",
-    "gulp-rename": "^1.4.0",
-    "gulp-watch": "^5.0.1",
-    "pump": "^3.0.0"
-  }
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {}
 }
