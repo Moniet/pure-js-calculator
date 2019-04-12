@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('minify-css', (cb) => {
-  return gulp.src('./assets/css/style.css')
+  return gulp.src('./assets/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./assets/css/min-css'));
   cb();
